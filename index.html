@@ -1,1 +1,163 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #full-body {
+                display: grid;
+                background-color: white;
+                grid-template-rows: 3fr 6fr 0.0fr;
+                grid-template-columns: 3fr 3fr 3fr;
+                grid-template-areas: 
+                "header header header"
+                ". content ."
+                ". . ."
+                ;
+                
+            }
+            .top-body {
+                grid-area: header;
+                
+                align-content: center;
+            }
+            li {
+                display: inline;
+            }
+            .left {
+                float: left;
+            }
+            .right {
+                float: right;
+            }
+            a { 
+                padding-left: 10px;               
+                
+            }
+            
+            .apps-icon {
+                
+                border: ivory;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .icon-small {
+                height: 25px;
+                width: 25px;
+            }
+            .b1 {
+                grid-area: button1;
+            }
+            .b2 {
+                grid-area: button2;
+            }
+            
+            .center-body {
+                grid-area: content;
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "cb1"
+                "cb2";
+                
+            }
+            
+            #search-logo {
+                grid-area: cb1;
+                
+                width: 450px;   
+            }
+            .search-form {
+                grid-area: cb2;
+                background-color: white;
+                display: flex;                
+                align-content: flex-start;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2em; 
+                  
+            }
+            
+            .search-input-text {
+                line-height: 40px;
+                border-color:rgb(201, 195, 195);
+                border-radius: 15px 15px 15px 15px;
+
+
+            }
+            .search-buttons {
+                
+                display: grid;
+                grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
+                
+                grid-template-areas: 
+                ". button1 . button2 .";
+                
+            }
+            footer {
+                
+                margin: 0px;
+                border: 0px;
+                padding: 15px;
+                
+                
+                background-color: lightgray;
+
+
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+        <div id="full-body" class="full-body">
+            <div id="top-body" class="top-body">
+                <ul>
+                    <li class="left"><a href="#">About</a></li>
+                    <li class="left"><a href="#">Store</a></li>
+
+                    <li class="right"><button>Sign in</button></li>
+                    <li class="right"><button class="apps-icon"><img class="icon-small" src="images/G-apps-icon.png"></button> </li>
+                    <li class="right"><a href="#">Images</a></li>
+                    <li class="right"><a href="#">Gmail</a></li>
+                    
+    
+                </ul>
+            </div>
+    
+            <div id="center-body" class="center-body">
+                <img id="search-logo"  src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+                <form class="search-form" action="#" target="_blank">
+                    <input class="search-input-text" id="search-input-text" type="text" >
+                    <div class="search-buttons">
+                        <button class="b1" type="submit" >Google Search</button>
+                        <button class="b2">I'm Feeling Lucky</button>
+                    </div>                  
+                </form>
+            </div>
+
+            
+
+        </div>
+        
+
+        <footer>
+            <div id="foot" class="foot">
+                
+                    <a href="#">Advertising</a>
+                    <a href="#">Business</a>
+                    <a href="#">How Search Works</a>
+                    
+                    <a class="right" href="#">Settings</a>
+                    <a class="right" href="#">Terms</a>
+                    <a class="right" href="#">Privacy</a>
+                    
+                
+            </div>
+
+        </footer>
+    </body>
+
+
+
+
+</html>
